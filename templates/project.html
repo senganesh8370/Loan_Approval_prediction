@@ -1,0 +1,180 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Loan Prediction</title>
+
+<style>
+
+body{
+font-family:sans-serif;
+margin:0;
+padding:0;
+}
+
+header{
+background:#2e3a59;
+padding:20px;
+text-align:center;
+color:white;
+}
+
+main{
+padding:20px;
+width:50%;
+margin:auto;
+}
+
+.description{
+text-align:center;
+}
+
+.form-container{
+border:1px solid #ddd;
+padding:20px;
+border-radius:8px;
+}
+
+.form-container label{
+display:block;
+margin-bottom:5px;
+}
+
+.form-container input{
+width:100%;
+padding:10px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:4px;
+}
+
+.form-container button{
+background:#2e3a59;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+width:100%;
+}
+
+.form-container button:hover{
+background:#44557f;
+}
+
+.Prediction{
+display:flex;
+justify-content:center;
+margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Loan Prediction System</h1>
+</header>
+
+<main>
+
+<section class="description">
+
+<h2>Welcome to Loan Prediction Tool</h2>
+
+<p>
+Enter details below to predict loan approval.
+</p>
+
+</section>
+
+
+<section class="form-container">
+
+<form action="{{ url_for('predict') }}" method="POST">
+
+<label>Income</label>
+
+<input
+type="number"
+step="any"
+name="income"
+required
+>
+
+
+<label>Credit Score</label>
+
+<input
+type="number"
+name="credit_score"
+required
+>
+
+
+<label>Loan Amount</label>
+
+<input
+type="number"
+step="any"
+name="loan_amount"
+required
+>
+
+
+<label>Years Employed</label>
+
+<input
+type="number"
+name="years_employed"
+required
+>
+
+
+<label>Points</label>
+
+<input
+type="number"
+step="any"
+name="points"
+required
+>
+
+
+<button type="submit">
+Predict Loan Status
+</button>
+
+</form>
+
+</section>
+
+</main>
+
+
+<div class="Prediction">
+
+{% if prediction %}
+
+<h2>
+
+Loan Status :
+{{ prediction }}
+
+</h2>
+
+{% endif %}
+
+</div>
+
+</body>
+
+</html>
+```

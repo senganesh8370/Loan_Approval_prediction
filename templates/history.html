@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Loan Prediction History</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#eef2f3;
+}
+
+header{
+background:#2e3a59;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.container{
+padding:40px;
+}
+
+table{
+
+width:100%;
+
+background:white;
+
+border-collapse:collapse;
+
+border-radius:10px;
+
+overflow:hidden;
+
+box-shadow:0 0 15px rgba(0,0,0,.1);
+
+}
+
+th{
+
+background:#2e3a59;
+
+color:white;
+
+padding:15px;
+
+}
+
+td{
+
+padding:12px;
+
+text-align:center;
+
+border-bottom:1px solid #ddd;
+
+}
+
+tr:hover{
+background:#f4f4f4;
+}
+
+.home-btn{
+
+margin-top:25px;
+
+text-align:center;
+
+}
+
+button{
+
+padding:12px 20px;
+
+background:#2e3a59;
+
+color:white;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+
+button:hover{
+background:#44557f;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>
+Loan Prediction History
+</h1>
+
+</header>
+
+<div class="container">
+
+<table>
+
+<tr>
+
+<th>Applicant Name</th>
+
+<th>Gender</th>
+
+<th>Education</th>
+
+<th>Income</th>
+
+<th>Loan Amount</th>
+
+<th>Credit History</th>
+
+<th>Prediction</th>
+
+</tr>
+
+{% for prediction in historical_data %}
+
+<tr>
+
+<td>{{ prediction[1] }}</td>
+
+<td>{{ prediction[2] }}</td>
+
+<td>{{ prediction[3] }}</td>
+
+<td>{{ prediction[4] }}</td>
+
+<td>{{ prediction[5] }}</td>
+
+<td>{{ prediction[6] }}</td>
+
+<td>{{ prediction[0] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+
+<div class="home-btn">
+
+<a href="/">
+
+<button>
+
+Go To Home
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

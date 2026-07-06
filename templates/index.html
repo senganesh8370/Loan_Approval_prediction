@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Loan Prediction System</title>
+
+<style>
+
+body{
+font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+background-color:#eef2f3;
+min-height:100vh;
+overflow-y:auto;
+}
+
+header{
+background:#2e3a59;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+section{
+padding:25px;
+margin:30px;
+background:white;
+border-radius:10px;
+box-shadow:0 0 12px rgba(0,0,0,.15);
+}
+
+.buttonGroup{
+width:100%;
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.buttonGroup button{
+
+padding:12px 22px;
+
+font-size:16px;
+
+border:none;
+
+border-radius:8px;
+
+background:#2e3a59;
+
+color:white;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.buttonGroup button:hover{
+
+background:#44557f;
+
+}
+
+.loan-img{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+opacity:.15;
+
+z-index:-1;
+
+}
+
+footer{
+
+background:#2e3a59;
+
+color:white;
+
+text-align:center;
+
+padding:12px;
+
+position:fixed;
+
+bottom:0;
+
+width:100%;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<img
+src="/static/images/loan.jpg"
+class="loan-img"
+>
+
+<header>
+
+<h1>
+Loan Prediction System
+</h1>
+
+</header>
+
+
+<section>
+
+<h2>
+About
+</h2>
+
+<p>
+
+Welcome to the Loan Prediction System — an intelligent Machine Learning application developed to predict loan approval status.
+
+This system evaluates applicant information such as income, education, loan amount and credit history to determine eligibility.
+
+The goal of this project is to simplify financial decision making and provide fast and reliable predictions using Machine Learning.
+
+</p>
+
+</section>
+
+
+<div class="buttonGroup">
+
+<a href="/project">
+<button>
+Check Loan Eligibility
+</button>
+</a>
+
+
+<a href="/about">
+<button>
+About
+</button>
+</a>
+
+
+<a href="/history">
+<button>
+History
+</button>
+</a>
+
+
+<a href="/contact">
+<button>
+Contact Us
+</button>
+</a>
+
+</div>
+
+
+<footer>
+
+<p>
+
+© 2026 Loan Prediction System | Flask + Machine Learning
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
